@@ -130,7 +130,7 @@ public class SimpleTimeFormat implements TimeFormat
       return "";
    }
 
-   private String getSingularName(Duration duration)
+   protected String getSingularName(Duration duration)
    {
       if (duration.isInFuture() && futureSingularName != null && !futureSingularName.isEmpty())
          return futureSingularName;
@@ -140,7 +140,7 @@ public class SimpleTimeFormat implements TimeFormat
          return singularName;
    }
 
-   private String getPluralName(Duration duration)
+   protected String getPluralName(Duration duration)
    {
       if (duration.isInFuture() && futurePluralName != null && !futurePluralName.isEmpty())
          return futurePluralName;
